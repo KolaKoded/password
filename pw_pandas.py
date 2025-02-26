@@ -13,12 +13,11 @@ print (details) #Prints the dictionary to confirm the user’s input before savi
 
 df = pd.DataFrame(details) #Converting dictionary data into a pandas dataframe
 
-df.to_csv('passwords_data.csv', mode='a', header=True, index=False);
-
-print("Password saved successfully!")
+#df.to_csv('passwords_data.csv', mode='a', header=True, index=False);
+#print("Password saved successfully!"
 
 try:
-    df.to_csv('passwords_data.csv', mode='a', header=False, index=False)
+    df.to_csv('passwords_data.csv', mode='a', header=True, index=False)
     print("Password saved successfully!")
 except Exception as e:
     print(f"Error while saving data: {e}")
